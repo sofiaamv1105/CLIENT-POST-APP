@@ -9,7 +9,7 @@ export const notAuthenticated: CanMatchFn = async (route, segments) => {
 
   const isAuthenticated = await firstValueFrom(authService.checkStatus());
    
-   if (!isAuthenticated) {
+   if (isAuthenticated) {
     router.navigateByUrl('/dashboard');
     return false;
    }
