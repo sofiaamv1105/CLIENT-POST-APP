@@ -11,47 +11,48 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent {
   authService = inject(AuthService);
-  router = inject(Router);
+  router =inject(Router);
   fb = inject(FormBuilder);
   hasError = signal(false);
   type = 'password';
   icon = 'bi bi-eye';
 
-  showPassword(type: string) {
-    if (type === 'password') {
-      this.type='text';
+  showPassword(type:string){
+    if(type === 'password'){
+      this.type = 'text';
       this.icon = 'bi bi-eye-slash';
-    } else {
-      this.type='password';
-      this.icon = 'bi bi-eye';
+    }else{
+      this.type = 'password';
+      this.icon = 'bi bi-eye';    
     }
   }
-  loginForm =this.fb.group({
+
+  loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
+    password:['', [Validators.required, Validators.minLength(6)]],
   });
 
-  onSubmit() {
-    if (this.loginForm.invalid) {
+  onSubmit(){
+    if(this.loginForm.invalid){
       this.hasError.set(true);
-      setTimeout(() => {
+      setTimeout(()=>{
         this.hasError.set(false);
       }, 2000);
-      return;
+      return
     }
-  
-    const { email = '', password = '' } = this.loginForm.value;
-    this.authService.login(email!, password!).subscribe((isAuthenticated) => {
-      if (isAuthenticated) {
-        alert ('Login successful');
+    const { email = '', password = ''} = this.loginForm.value;
+    console.log({email, password})
+    this.authService.login(email!, password!).subscribe((isAuthenticated)=>{
+      if(isAuthenticated){
+        alert('logueado');
         this.router.navigateByUrl('/dashboard');
         return;
-      } 
+      }
       this.hasError.set(true);
-      setTimeout(() => {
+      setTimeout(()=>{
         this.hasError.set(false);
       }, 2000);
       return;
     });
-  }  
+  }
 }

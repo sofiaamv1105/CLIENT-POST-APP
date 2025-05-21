@@ -4,11 +4,11 @@ import { HeaderFrontComponent } from '../../components/header-front/header-front
 import { FooterFrontComponent } from '../../components/footer-front/footer-front.component';
 
 @Component({
-  selector: 'app-front-layout',
+  selector: 'app-front-layouts',
   imports: [RouterOutlet, HeaderFrontComponent, FooterFrontComponent],
-  templateUrl: './front-layout.component.html',
-  styleUrl: './front-layout.component.css'
+  templateUrl: './front-layouts.component.html',
+  styleUrl: './front-layouts.component.css'
 })
-export class FrontLayoutComponent {
+export class FrontLayoutsComponent {
 
 }
