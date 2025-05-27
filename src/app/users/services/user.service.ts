@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { inject, Injectable } from '@angular/core';
 import { BaseHttpService } from '../../shared/services/base-http.service';
 import { Observable, of, tap } from 'rxjs';
@@ -25,16 +24,10 @@ const emptyUser: User = {
 
   Role: {} as Role
 };
-=======
-import { Injectable } from '@angular/core';
-import { BaseHttpService } from '../../shared/services/base-http.service';
-import { Observable } from 'rxjs';
->>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
 
 @Injectable({
   providedIn: 'root'
 })
-<<<<<<< HEAD
 export class UserService extends BaseHttpService{
 
   private userCache = new Map<string, UserResponse>;
@@ -183,10 +176,4 @@ export class UserService extends BaseHttpService{
     return this.http.put<string>(`${this.apiUrl}/users/avatar/${id}`, formData)
   }
 
-=======
-export class UserService extends BaseHttpService {
-  getUsers():Observable<any> {
-    return this.http.get(`${this.apiUrl}/users`);
-  }
->>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
 }

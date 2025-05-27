@@ -22,13 +22,8 @@
     "daisyui": "^5.0.35",
     "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
-<<<<<<< HEAD
-    "sweetalert2": "^11.21.2",
-    "tailwindcss": "^4.1.7",
-=======
     "sweetalert2": "^11.22.0",
-    "tailwindcss": "^4.1.6",
->>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
+    "tailwindcss": "^4.1.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -39,11 +34,7 @@
     "@types/jasmine": "~5.1.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
-<<<<<<< HEAD
-    "jasmine-core": "~5.5.0",
-=======
     "jasmine-core": "~5.6.0",
->>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

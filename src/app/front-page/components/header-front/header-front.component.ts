@@ -10,8 +10,5 @@ import { AuthService } from '../../../auth/services/auth.service';
 })
 export class HeaderFrontComponent {
   authService = inject(AuthService);
-<<<<<<< HEAD
 
-=======
->>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
 }
