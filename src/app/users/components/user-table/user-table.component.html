@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 
 <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
   <table class="table text-center">
     <!-- head -->
     <thead>
       <tr >
+=======
+<div class="overflow-x-auto rounded-box border border-base-content/5">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+>>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
         <th>#</th>
         <th>FullName</th>
         <th>Email</th>
@@ -12,6 +20,7 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
       @for ( user of users(); track user.id ; let i = $index ) {
       <!-- row 1 -->
       <tr>
@@ -26,10 +35,28 @@
             </div>
             <div>
               <div class="font-bold"> {{ user.first_name }} {{ user.last_name }}</div>
+=======
+      @for (user of users(); track user.id; let i = $index) {
+      <!-- row 1 -->
+      <tr>
+        <th>{{i+1}}</th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle h-12 w-12">
+                <img
+                  src="'http://localhost:3000/api/users/avatar/'{{user.id}}" 
+                  alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">{{user.first_name}} {{user.last_name}}</div>
+>>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
             </div>
           </div>
         </td>
         <td>
+<<<<<<< HEAD
           <span class="badge badge-ghost badge-sm">
             {{ user.email }}
           </span>
@@ -49,6 +76,16 @@
           [routerLink]="['/dashboard/users', user.id]" >
             <i class="bi bi-pencil-square text-lg"></i>
           </a>
+=======
+          <span class="badge badge-ghost badge-sm">{{user.email}}</span>
+        </td>
+        <td>
+          <span class="badge badge-ghost badge-sm">{{user.Telephone}}</span>
+        </td>
+        <th>
+          <button class="btn btn-ghost btn-xs">delete</button>
+          <button class="btn btn-ghost btn-xs">edit</button>
+>>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
         </th>
       </tr>
     }

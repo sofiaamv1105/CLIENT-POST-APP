@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @if(userResource.isLoading()){
  <div class="flex justify-center items-center h-screen">
         <span class="loading loading-spinner loading-lg"></span>
@@ -7,3 +8,22 @@
 @if (userResource.hasValue()) {
     <user-detail [user]="userResource.value().data"></user-detail>
 }
+=======
+<div class="mb-5">
+<h1 class="text 2x1 text-secondary">Lista de usuarios</h1>
+</div>
+<div class="divider.divider-secondary"></div>
+@if (userResource.isLoading()) {
+  <div class="flex justify-center items-center h-screen">
+    <p class="loading loading-spinner loading-lg">Cargando usuarios...</p>
+  </div>
+}
+@if (userResource.hasValue()) {
+<user-table [users]="userResource.value().data.users"></user-table>
+} @else {
+    <div class="flex justify-center items-center h-screen">
+        <h2 class="text-2x1">ELista no tiene datos para mostrar</h2>
+    </div>
+
+}
+>>>>>>> 8f41906ea60ec3e0de66a0770b6d341a362a6cbc
